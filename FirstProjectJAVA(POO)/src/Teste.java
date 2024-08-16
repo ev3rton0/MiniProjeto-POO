@@ -19,8 +19,9 @@ public class Teste{
         // Jogando o campeonato
         campeonato.jogarCampeonato();
     
+        System.out.println("<-------------------------->");
         // Exibindo a classificação final
-        System.out.println("\nClassificação Final:");
+        System.out.println("\n-> Placar Final <-\n");
         System.out.println(campeonato.getClassificacao());
 
         System.out.println("[]=====================================[]");
@@ -32,4 +33,3 @@ public class Teste{
     }
 
 }
-
