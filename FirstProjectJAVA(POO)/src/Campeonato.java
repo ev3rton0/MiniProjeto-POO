@@ -13,9 +13,10 @@ public class Campeonato {
         for (int i = 0; i < clubes.length; i++) {
             for (int j = i + 1; j < clubes.length; j++) {
                 // validar para que os times joguem entre si sem faltar nenhum
-                System.out.println("<-------------------------->");
+                System.out.println("<--------------------------> \n");
                 jogarPartida(clubes[i], clubes[j]);
                 jogarPartida(clubes[j], clubes[i]);
+
             } //o .length é pra pecorrer o tamanho do array
         }
     }
@@ -31,12 +32,17 @@ public class Campeonato {
         if (golsTime1 > golsTime2) {
             t1.ganhar(golsTime1 - golsTime2);
             t2.perder(golsTime1 - golsTime2);
+            System.out.println("| O time vencedor foi " + " "+t1.nome + "\n");
+
         } else if (golsTime1 < golsTime2) {
             t2.ganhar(golsTime2 - golsTime1);
             t1.perder(golsTime2 - golsTime1);
+            System.out.println("| O time vencedor foi " + " "+t2.nome + "\n");
+
         } else {
             t1.empatar();
             t2.empatar();
+            System.out.println("| EMPATE!  " + "\n");
         }
     }
 
@@ -64,9 +70,9 @@ public class Campeonato {
     
         // Montei a string de classificação usando concatenação pra ficarem alinhados.
         for (Clube clube : clubes) {
-            classificacao += clube.getNome() 
-                            + " - Pontos: " + clube.getPontos()
-                            + " | Saldo de Gols: " + clube.getSaldoGols()
+            classificacao += "|" + clube.getNome() 
+                            + "\n Pontos: " + clube.getPontos() +"\n"
+                            + " Saldo de Gols: " + clube.getSaldoGols() +"\n"
                             + "\n";
         }
     
