@@ -24,15 +24,5 @@ public class Clube {
         this.saldoGols -= saldoGols; //subtrai o valor de saldoGols se o time perder.
     }
 
-    public String getNome() {
-        return nome;
-    }
-    
-    public int getPontos() {
-        return pontos;
-    }
-    
-    public int getSaldoGols() {
-        return saldoGols;
-    }
+
 }
