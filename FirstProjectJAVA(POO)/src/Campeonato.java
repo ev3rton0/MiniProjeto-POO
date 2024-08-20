@@ -27,7 +27,7 @@ public class Campeonato {
         int golsTime1 = random.nextInt(6);
         int golsTime2 = random.nextInt(6);
         //importei o random do java pra gerar aleatoriamente os gols dos times.
-        System.out.println(t1.getNome() + " " + golsTime1 + " x " + golsTime2 + " " + t2.getNome());
+        System.out.println(t1.nome + " " + golsTime1 + " x " + golsTime2 + " " + t2.nome);
 
         if (golsTime1 > golsTime2) {
             t1.ganhar(golsTime1 - golsTime2);
@@ -53,13 +53,13 @@ public class Campeonato {
         // Ordena os clubes por pontos (e saldo de gols para desempate)
         for (int i = 0; i < clubes.length - 1; i++) {
             for (int j = i + 1; j < clubes.length; j++) {
-                if (clubes[i].getPontos() < clubes[j].getPontos()) { 
+                if (clubes[i].pontos < clubes[j].pontos) { 
                     // Troca os clubes de lugar
                     Clube aux = clubes[i];
                     clubes[i] = clubes[j];
                     clubes[j] = aux;
                 }
-                else if (clubes[i].getPontos() == clubes[j].getPontos() && clubes[i].getSaldoGols() < clubes[j].getSaldoGols()){ //validação em caso de empate utiliza o getSaldoGols.
+                else if (clubes[i].pontos == clubes[j].pontos && clubes[i].saldoGols < clubes[j].saldoGols) { //validação em caso de empate utiliza o getSaldoGols.
                     Clube aux = clubes[i];
                     clubes[i] = clubes[j];
                     clubes[j] = aux;
@@ -70,9 +70,9 @@ public class Campeonato {
     
         // Montei a string de classificação usando concatenação pra ficarem alinhados.
         for (Clube clube : clubes) {
-            classificacao += "|" + clube.getNome() 
-                            + "\n Pontos: " + clube.getPontos() +"\n"
-                            + " Saldo de Gols: " + clube.getSaldoGols() +"\n"
+            classificacao += "|" + clube.nome
+                            + "\n Pontos: " + clube.pontos +"\n"
+                            + " Saldo de Gols: " + clube.saldoGols +"\n"
                             + "\n";
         }
     
