@@ -28,7 +28,7 @@ public class Teste{
         System.out.println(asciiArt.getImprimirTrofeu());
         
         // Exibindo o campeão
-        System.out.println("Parabéns ao " + campeonato.getCampeao().getNome() + ", o grande campeão!");
+        System.out.println("Parabéns ao " + campeonato.getCampeao().nome + ", o grande campeão!");
         System.out.println("[]=====================================[]");
     }
 
